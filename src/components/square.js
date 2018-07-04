@@ -2,7 +2,10 @@ import React from 'react';
 
 const Square = (props) => {
   return (
-    <div className="square"></div>
+    <div 
+      onClick={() => alert('click')}
+      className="square">
+    </div>
   );
 };
 
