@@ -3,7 +3,7 @@ import React from 'react';
 const Square = (props) => {
   return (
     <div 
-      onClick={() => alert('click')}
+      onClick={() => props.mark()}
       className="square">
     </div>
   );

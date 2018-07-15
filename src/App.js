@@ -9,23 +9,12 @@ class App extends Component {
       currentPlayer: 'X',
       board: []
     };
+    this.mark = this.mark.bind(this);
   }
 
-  createBoard() {
-    let row, column;
-    let rows     = 3;
-    let columns  = 3;
-    let newBoard = [];
-
-    for (row = 0; row < rows; row++) {
-      let newRow   = [];
-      for (column = 0; column < columns; column++) {
-        newRow.push({occupied: null});
-      }
-      newBoard.push(newRow);
-    }
-    console.log(newBoard);
-    this.setState({board: newBoard});
+  mark() {
+    alert(this.state.currentPlayer);
+    return;
   }
 
   render() {
@@ -40,19 +29,19 @@ class App extends Component {
         </div>
         <div id="gameBoard">
           <div className="row">
-            <Square />
-            <Square />
-            <Square />
+            <Square mark={this.mark}/>
+            <Square mark={this.mark}/>
+            <Square mark={this.mark}/>
           </div>
           <div className="row">
-            <Square />
-            <Square />
-            <Square />
+            <Square mark={this.mark}/>
+            <Square mark={this.mark}/>
+            <Square mark={this.mark}/>
           </div>
           <div className="row">
-            <Square />
-            <Square />
-            <Square />
+            <Square mark={this.mark}/>
+            <Square mark={this.mark}/>
+            <Square mark={this.mark}/>
           </div>
         </div>
       </div>
@@ -61,3 +50,21 @@ class App extends Component {
 }
 
 export default App;
+
+
+//  createBoard() {
+//   let row, column;
+//   let rows     = 3;
+//   let columns  = 3;
+//   let newBoard = [];
+//
+//   for (row = 0; row < rows; row++) {
+//     let newRow   = [];
+//     for (column = 0; column < columns; column++) {
+//       newRow.push({occupied: null});
+//     }
+//     newBoard.push(newRow);
+//   }
+//   console.log(newBoard);
+//   this.setState({board: newBoard});
+// }
